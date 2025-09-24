@@ -325,6 +325,37 @@ Percentuale di duplicati: 0.00%
 
 
 
+Here’s the English version you can drop directly into your GitHub README:
+
+---
+
+### 📌 Why we created 5-year derived features (mean, std, change)
+
+Banking crises do not only depend on the point-in-time value of a macroeconomic variable in a given year (e.g., GDP, inflation, consumption), but mainly on its **temporal dynamics**.
+To capture this dimension, we built three types of features over the **previous 5 years**:
+
+1. **Moving average (mean)**
+
+   * Represents the **average level** of the variable over the past years.
+   * Example: a persistently low GDP or consistently high inflation can indicate structural weaknesses.
+
+2. **Standard deviation (std)**
+
+   * Measures the **volatility** of the variable.
+   * High values indicate macroeconomic instability (e.g., strongly fluctuating inflation), which is often linked to stress in the financial system.
+
+3. **Change (percentage difference from 5 years earlier)**
+
+   * Captures the **direction and intensity of the trend**.
+   * Strong growth or sharp contraction can signal imbalances that increase the risk of a banking crisis.
+
+👉 In summary, these transformations allow the model to account not only for absolute values, but also for the **stability** and **trend** of economic variables—key elements for anticipating rare and complex events such as banking crises.
+
+---
+
+Do you want me to polish it in a more **academic/research style**, so it reads like part of a paper rather than a project README?
+
+
 
 
   
