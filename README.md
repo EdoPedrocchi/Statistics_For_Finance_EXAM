@@ -357,5 +357,35 @@ Do you want me to polish it in a more **academic/research style**, so it reads l
 
 
 
+Got it 👍 here’s a more **academic / research-style version**, suitable for a paper or a research-oriented repo:
+
+---
+
+### 📌 Rationale for Constructing 5-Year Derived Features (Mean, Std, Change)
+
+The occurrence of banking crises is rarely explained by contemporaneous macroeconomic indicators alone. Instead, crises tend to be associated with the **medium-term dynamics** of the underlying economic and financial environment. To capture these dynamics, we construct a set of derived features based on a rolling 5-year window:
+
+1. **5-Year Moving Average (Mean)**
+
+   * Provides a smoothed measure of the variable’s **structural level** over recent history.
+   * For instance, persistently low average GDP per capita or sustained high inflation levels may reflect long-term vulnerabilities that increase the probability of systemic stress.
+
+2. **5-Year Standard Deviation (Std)**
+
+   * Quantifies the **volatility** of the variable within the observation window.
+   * High volatility in key indicators (e.g., inflation, credit growth) is often symptomatic of macroeconomic instability, which can undermine banking sector resilience.
+
+3. **5-Year Change (Δ)**
+
+   * Captures the **direction and magnitude of the trend** by comparing the current value with that of five years prior.
+   * Rapid expansions or contractions can be indicative of unsustainable dynamics (e.g., asset bubbles or recessions) that historically precede financial crises.
+
+By incorporating these measures, the feature set accounts not only for the static level of macroeconomic variables, but also for their **stability** and **trajectory** over time. Such temporal characteristics are widely recognized in the literature as critical determinants of financial fragility and crisis prediction.
+
+---
+
+Do you want me to also add **citations to relevant academic papers** (e.g., Reinhart & Rogoff, Laeven & Valencia, Schularick & Taylor) so the README sounds closer to a research note?
+
+
 
   
