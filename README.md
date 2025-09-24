@@ -21,12 +21,9 @@ i made the following steps:
 
 ## EDA
 
-Analizzando i risultati dell'EDA del tuo dataset `df_features_clean`, ecco le principali osservazioni:
-
 ## **📊 PANORAMICA GENERALE**
-- **Dataset pulito**: 7,915 righe × 43 colonne, 2.66 MB
-- **Qualità eccellente**: 0% valori mancanti, 0% duplicati
-- **Tutte variabili numeriche**: Dataset completamente quantitativo (finanza/economia)
+- 7,915 righe × 43 colonne, 
+-  0% valori mancanti, 0% duplicati
 
 ## **🎯 VARIABILE TARGET**
 - **BankingCrisis**: Solo 2.5% di crisi bancarie (198 su 7,915 osservazioni)
@@ -79,14 +76,7 @@ analizza questi risultati dell'eda
 ```
 
 
-1. INFORMAZIONI GENERALI DEL DATASET
---------------------------------------------------
-Forma del dataset: (7915, 43)
-Numero di righe: 7,915
-Numero di colonne: 43
-Memoria utilizzata: 2.66 MB
-
-2. TIPI DI DATI E VALORI MANCANTI
+1.  TIPI DI DATI E VALORI MANCANTI
 --------------------------------------------------
                        Tipo  Valori_Non_Null  Valori_Null  Percentuale_Null
 BankingCrisis       float64             7915            0               0.0
@@ -133,83 +123,7 @@ imports_USD_mean5y  float64             7915            0               0.0
 imports_USD_std5y   float64             7915            0               0.0
 imports_USD_chg     float64             7915            0               0.0
 
-3. PRIME 5 RIGHE DEL DATASET
---------------------------------------------------
-     BankingCrisis  rGDP_pc_mean5y  rGDP_pc_std5y  rGDP_pc_chg  \
-468            0.0    393347.61875   14409.449451    -0.027724   
-469            0.0    395739.53125   14898.049072     0.044744   
-470            0.0    404236.49375   14694.038733    -0.004052   
-471            0.0    411540.28125    9476.005675    -0.081872   
-472            0.0    408485.74375   14937.420596    -0.083050   
 
-     rGDP_USD_mean5y  rGDP_USD_std5y  rGDP_USD_chg  cons_GDP_mean5y  \
-468     14869.842773      878.371563         0.002        71.201187   
-469     15098.413574      850.491728         0.081        71.203560   
-470     15491.258594     1146.358662         0.031        71.231464   
-471     16210.385937     1100.707588        -0.050        71.260855   
-472     16580.593945      804.927382        -0.052        71.223094   
-
-     cons_GDP_std5y  cons_GDP_chg  ...  cons_USD_chg  inv_USD_mean5y  \
-468        0.030977      0.000408  ...      0.022590      956.150299   
-469        0.022286      0.001501  ...      0.227543      972.424052   
-470        0.058701      0.000887  ...      0.122401     1037.599625   
-471        0.083087     -0.004821  ...     -0.268078     1106.445911   
-472        0.132657     -0.001042  ...     -0.039893     1120.821582   
-
-     inv_USD_std5y  inv_USD_chg  finv_USD_mean5y  finv_USD_std5y  \
-468      33.300181     0.025798       919.051544       32.008105   
-469      36.728138     0.227026       934.693868       35.303063   
-470     133.756215     0.120592       997.340591      128.566398   
-471     192.657985    -0.273079      1063.515637      185.182808   
-472     178.613119    -0.035542      1077.333508      171.682905   
-
-     finv_USD_chg  imports_USD_mean5y  imports_USD_std5y  imports_USD_chg  
-468      0.025798         1128.214111         160.659350         0.025157  
-469      0.227026         1212.879663         141.960331         0.229102  
-470      0.120592         1340.057153         207.170148         0.123158  
-471     -0.273079         1494.472046         262.928378        -0.281793  
-472     -0.035541         1511.764062         245.723358        -0.022431  
-
-[5 rows x 43 columns]
-
-4. ULTIME 5 RIGHE DEL DATASET
---------------------------------------------------
-       BankingCrisis  rGDP_pc_mean5y  rGDP_pc_std5y  rGDP_pc_chg  \
-56884            0.0     6840.975488     477.548078     0.017462   
-56885            0.0     7108.244043     393.956405     0.014243   
-56886            0.0     7329.759961     286.789232    -0.002413   
-56887            0.0     7462.063379     218.705187     0.005940   
-56888            0.0     7573.955566     107.286430     0.003984   
-
-       rGDP_USD_mean5y  rGDP_USD_std5y  rGDP_USD_chg  cons_GDP_mean5y  \
-56884     12616.601758     1543.025942      0.050575        61.114182   
-56885     13546.531445     1440.614755      0.046933        60.496479   
-56886     14423.902344     1290.605039      0.029204        59.994283   
-56887     15155.656055     1171.510018      0.037551        60.018166   
-56888     15868.444922      992.759615      0.035259        60.002950   
-
-       cons_GDP_std5y  cons_GDP_chg  ...  cons_USD_chg  inv_USD_mean5y  \
-56884        1.331044      0.005261  ...      0.105403     6513.524219   
-56885        1.234915      0.002035  ...     -0.030047     7218.104492   
-56886        0.912258      0.030797  ...     -0.193233     8106.536621   
-56887        0.954150     -0.013172  ...     -0.026179     8714.612402   
-56888        0.942225     -0.113919  ...      0.093536     8773.786328   
-
-       inv_USD_std5y  inv_USD_chg  finv_USD_mean5y  finv_USD_std5y  \
-56884    1341.902090     0.179339      5478.632520      897.251619   
-56885    1816.965025    -0.024392      5870.892090     1171.970347   
-56886    1374.802232    -0.016651      6711.501855     1200.643059   
-56887     786.164603    -0.119202      7296.074023     1004.619999   
-56888     698.250703     0.324428      7510.913574      919.489776   
-
-       finv_USD_chg  imports_USD_mean5y  imports_USD_std5y  imports_USD_chg  
-56884      0.188154         6368.287109        1919.473512         0.245737  
-56885      0.164478         7516.164551        2774.031432        -0.095033  
-56886     -0.030346         8721.088477        2173.292752        -0.105177  
-56887     -0.065342         9402.238379        1360.199933        -0.107709  
-56888      0.314999         9505.847852        1196.757504         0.168926  
-
-[5 rows x 43 columns]
 
 5. STATISTICHE DESCRITTIVE - VARIABILI NUMERICHE
 --------------------------------------------------
@@ -311,23 +225,8 @@ imports_USD_mean5y   9.010936   110.253914  2.942696e+06   15437.389691
 imports_USD_std5y   11.696733   208.563133  6.953667e+05    2872.259274
 imports_USD_chg     86.325212  7580.942378  1.284231e+04       0.208383
 
-6. STATISTICHE DESCRITTIVE - VARIABILI CATEGORICHE
---------------------------------------------------
-Nessuna variabile categorica trovata.
-
-7. ANALISI DEI DUPLICATI
---------------------------------------------------
-Numero di righe duplicate: 0
-Percentuale di duplicati: 0.00%
-
-8. GRAFICI DI DISTRIBUZIONE DELLE VARIABILI NUMERICHE
-```
 
 
-
-Here’s the English version you can drop directly into your GitHub README:
-
----
 
 ### 📌 Why we created 5-year derived features (mean, std, change)
 
@@ -349,43 +248,10 @@ To capture this dimension, we built three types of features over the **previous 
    * Captures the **direction and intensity of the trend**.
    * Strong growth or sharp contraction can signal imbalances that increase the risk of a banking crisis.
 
-👉 In summary, these transformations allow the model to account not only for absolute values, but also for the **stability** and **trend** of economic variables—key elements for anticipating rare and complex events such as banking crises.
-
----
-
-Do you want me to polish it in a more **academic/research style**, so it reads like part of a paper rather than a project README?
 
 
 
-Got it 👍 here’s a more **academic / research-style version**, suitable for a paper or a research-oriented repo:
-
----
-
-### 📌 Rationale for Constructing 5-Year Derived Features (Mean, Std, Change)
-
-The occurrence of banking crises is rarely explained by contemporaneous macroeconomic indicators alone. Instead, crises tend to be associated with the **medium-term dynamics** of the underlying economic and financial environment. To capture these dynamics, we construct a set of derived features based on a rolling 5-year window:
-
-1. **5-Year Moving Average (Mean)**
-
-   * Provides a smoothed measure of the variable’s **structural level** over recent history.
-   * For instance, persistently low average GDP per capita or sustained high inflation levels may reflect long-term vulnerabilities that increase the probability of systemic stress.
-
-2. **5-Year Standard Deviation (Std)**
-
-   * Quantifies the **volatility** of the variable within the observation window.
-   * High volatility in key indicators (e.g., inflation, credit growth) is often symptomatic of macroeconomic instability, which can undermine banking sector resilience.
-
-3. **5-Year Change (Δ)**
-
-   * Captures the **direction and magnitude of the trend** by comparing the current value with that of five years prior.
-   * Rapid expansions or contractions can be indicative of unsustainable dynamics (e.g., asset bubbles or recessions) that historically precede financial crises.
-
-By incorporating these measures, the feature set accounts not only for the static level of macroeconomic variables, but also for their **stability** and **trajectory** over time. Such temporal characteristics are widely recognized in the literature as critical determinants of financial fragility and crisis prediction.
-
----
-
-Do you want me to also add **citations to relevant academic papers** (e.g., Reinhart & Rogoff, Laeven & Valencia, Schularick & Taylor) so the README sounds closer to a research note?
 
 
-
+G
   
